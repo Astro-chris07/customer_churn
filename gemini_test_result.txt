@@ -1,0 +1,61 @@
+Configuring with key: AIzaS...
+Listing models...
+Found: models/gemini-2.5-flash
+Found: models/gemini-2.5-pro
+Found: models/gemini-2.0-flash-exp
+Found: models/gemini-2.0-flash
+Found: models/gemini-2.0-flash-001
+Found: models/gemini-2.0-flash-exp-image-generation
+Found: models/gemini-2.0-flash-lite-001
+Found: models/gemini-2.0-flash-lite
+Found: models/gemini-2.0-flash-lite-preview-02-05
+Found: models/gemini-2.0-flash-lite-preview
+Found: models/gemini-exp-1206
+Found: models/gemini-2.5-flash-preview-tts
+Found: models/gemini-2.5-pro-preview-tts
+Found: models/gemma-3-1b-it
+Found: models/gemma-3-4b-it
+Found: models/gemma-3-12b-it
+Found: models/gemma-3-27b-it
+Found: models/gemma-3n-e4b-it
+Found: models/gemma-3n-e2b-it
+Found: models/gemini-flash-latest
+Found: models/gemini-flash-lite-latest
+Found: models/gemini-pro-latest
+Found: models/gemini-2.5-flash-lite
+Found: models/gemini-2.5-flash-image-preview
+Found: models/gemini-2.5-flash-image
+Found: models/gemini-2.5-flash-preview-09-2025
+Found: models/gemini-2.5-flash-lite-preview-09-2025
+Found: models/gemini-3-pro-preview
+Found: models/gemini-3-flash-preview
+Found: models/gemini-3-pro-image-preview
+Found: models/nano-banana-pro-preview
+Found: models/gemini-robotics-er-1.5-preview
+Found: models/gemini-2.5-computer-use-preview-10-2025
+Found: models/deep-research-pro-preview-12-2025
+
+Attempting generation with gemini-flash-latest...
+ERROR: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash
+Please retry in 41.428592412s. [links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, violations {
+  quota_metric: "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+  quota_id: "GenerateRequestsPerDayPerProjectPerModel-FreeTier"
+  quota_dimensions {
+    key: "model"
+    value: "gemini-2.5-flash"
+  }
+  quota_dimensions {
+    key: "location"
+    value: "global"
+  }
+  quota_value: 20
+}
+, retry_delay {
+  seconds: 41
+}
+]

@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+pandas
+scikit-learn
+joblib
+openpyxl
+google-generativeai
+markdown
+xhtml2pdf
+
+
+python-dotenv
