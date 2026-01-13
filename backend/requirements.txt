@@ -10,4 +10,6 @@ markdown
 xhtml2pdf
 
 
+
 python-dotenv
+gunicorn
