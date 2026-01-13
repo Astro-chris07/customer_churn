@@ -16,7 +16,8 @@ const ResultsSection = ({ data }) => {
         if (!emailInput || !report) return;
         setSendingEmail(true);
         try {
-            await axios.post('http://127.0.0.1:8000/send_report', {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+            await axios.post(`${apiUrl}/send_report`, {
                 email: emailInput,
                 report_markdown: report
             });
@@ -89,7 +90,8 @@ const ResultsSection = ({ data }) => {
             const sortedRisk = [...results].sort((a, b) => b.churn_probability - a.churn_probability);
             const headers = Object.keys(results[0] || {});
 
-            const response = await fetch('http://127.0.0.1:8000/generate_report', {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+            const response = await fetch(`${apiUrl}/generate_report`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

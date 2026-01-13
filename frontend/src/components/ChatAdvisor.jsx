@@ -48,7 +48,8 @@ const ChatAdvisor = ({ results }) => {
             // Create temporary bot message for streaming
             setMessages(prev => [...prev, { role: 'bot', text: '' }]);
 
-            const response = await fetch('http://127.0.0.1:8000/chat', {
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+            const response = await fetch(`${apiUrl}/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

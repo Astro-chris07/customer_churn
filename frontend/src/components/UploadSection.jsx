@@ -18,8 +18,9 @@ const UploadSection = ({ setResults, setLoading, loading }) => {
         formData.append('file', file);
 
         try {
-            // Updated to point to backend port 8000
-            const response = await axios.post('http://127.0.0.1:8000/predict', formData, {
+            // Updated to use environment variable
+            const apiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+            const response = await axios.post(`${apiUrl}/predict`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
